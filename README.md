@@ -51,7 +51,7 @@ The expected result would be that hello would be outputed while the terminal wou
 
 ### Future Works
 
-- [] Add pipe command `|` to pipe the output to another command
+- [ ] Add pipe command `|` to pipe the output to another command
 - [ ] Add signals processing to handle signals like `SIGINT`
 
 
