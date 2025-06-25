@@ -1,0 +1,14 @@
+total 128
+drwxr-xr-x   13 tanyipeng  staff    416 Jun 25 15:57 .
+drwx------@  91 tanyipeng  staff   2912 Jun 25 11:41 ..
+drwxr-xr-x   14 tanyipeng  staff    448 Jun 25 13:22 .git
+-rw-r--r--    1 tanyipeng  staff   1697 Jun 25 13:22 README.md
+-rw-r--r--    1 tanyipeng  staff    455 Jun 25 12:30 dockerfile
+drwxr-xr-x    5 tanyipeng  staff    160 Jun 25 11:59 include
+-rw-r--r--    1 tanyipeng  staff    751 Jun 25 15:56 makefile
+-rwx------    1 tanyipeng  staff      0 Jun 25 15:57 output.txt
+-rwxr-xr-x    1 tanyipeng  staff  36104 Jun 25 15:56 shell
+-rw-r--r--    1 tanyipeng  staff   8840 Jun 25 15:54 shell.o
+drwxr-xr-x    8 tanyipeng  staff    256 Jun 25 15:53 src
+-rwxr-xr-x    1 tanyipeng  staff    124 Jun  8 17:03 test-shell.sh
+drwxr-xr-x  141 tanyipeng  staff   4512 Jun  8 17:03 tests

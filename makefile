@@ -2,7 +2,7 @@
 
 CC = gcc
 TARG = shell
-OPTS = -Wall -O -g 
+OPTS = -Wall -O -g -Werror
 SRC_DIR = src
 INC_DIR = include
 

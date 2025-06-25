@@ -31,11 +31,7 @@ char** processUserCommands(char *userInput) {
         userInput[len - 1] = '\0';  // Remove newline character
     }
 
-    // Tokenize input based on spaces and tabs
-    // if (*userInput == '\0') {
-    //     userCommands[0] = NULL;  // Set the first element to NULL for empty input
-    //     return NULL;  // Return immediately for empty input
-    // }
+    
     
     while ((stringToken = strsep(&userInput, " \t"))) {
         if (strlen(stringToken) == 0) {
@@ -207,13 +203,16 @@ void executeUserCommands(char** userCommands, char** searchPath)
         else{
             arguments = currentCommand;
         }
+
         
         
         
         
         if (execvp(executionPath, arguments) == -1) {
-    handleError();
+        handleError();
 }
+
+    
 
 
 
@@ -224,6 +223,7 @@ void executeUserCommands(char** userCommands, char** searchPath)
 
     
     // this is for the parent  process, after 
+    //freeStringArray(userCommands);
     
        for (int i = 0; i < idx; i++) {
         

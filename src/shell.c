@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+#include"shell.h"
 #include "builtin.h"
 #include "user.h"
 #include <unistd.h>
@@ -42,7 +42,10 @@ char ** processedUserInput = processUserInput(userInput);
 if(processedUserInput!=NULL){
 
 executeUserCommands(processedUserInput,searchPath);
+freeStringArray(processedUserInput);
 }
+
+
 
 
 
@@ -60,8 +63,8 @@ executeUserCommands(processedUserInput,searchPath);
 
 
 
+free(userInput);
 
-free(searchPath);
 exit(0);
 
 
@@ -109,6 +112,18 @@ void handleError(){
     char error_message[30] = "An error has occurred\n";
     write(STDERR_FILENO, error_message, strlen(error_message)); 
     exit(1);
+
+
+}
+
+void freeStringArray(char ** stringArray){
+    if(stringArray){
+    for(int i=0;stringArray[i]!=NULL;i++){
+        free(stringArray[i]);
+    }
+
+    free(stringArray);
+}
 
 }
 
