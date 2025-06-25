@@ -1,0 +1,18 @@
+total 208
+drwxr-xr-x   17 tanyipeng  staff    544 Jun 25 11:35 .
+drwxr-xr-x@  29 tanyipeng  staff    928 Jun 24 10:04 ..
+-rw-r--r--    1 tanyipeng  staff  12170 Jun  8 17:03 README.md
+-rw-r--r--    1 tanyipeng  staff   1600 Jun 25 11:35 builtin.c
+-rw-r--r--    1 tanyipeng  staff    100 Jun 25 10:32 builtin.h
+-rw-r--r--    1 tanyipeng  staff   2120 Jun 25 11:35 builtin.o
+-rw-r--r--    1 tanyipeng  staff    297 Jun 25 11:10 makefile
+-rwx------    1 tanyipeng  staff      0 Jun 25 11:35 output.txt
+-rwxr-xr-x    1 tanyipeng  staff    124 Jun  8 17:03 test-wish.sh
+drwxr-xr-x  141 tanyipeng  staff   4512 Jun  8 17:03 tests
+-rw-r--r--    1 tanyipeng  staff   6417 Jun 25 11:18 user.c
+-rw-r--r--    1 tanyipeng  staff    187 Jun 25 10:37 user.h
+-rw-r--r--    1 tanyipeng  staff   4632 Jun 25 11:19 user.o
+-rwxr-xr-x    1 tanyipeng  staff  35272 Jun 25 11:35 wish
+-rw-r--r--    1 tanyipeng  staff   1297 Jun 25 11:14 wish.c
+-rw-r--r--    1 tanyipeng  staff     22 Jun 23 17:18 wish.h
+-rw-r--r--    1 tanyipeng  staff   7760 Jun 25 11:14 wish.o
