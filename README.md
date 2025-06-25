@@ -2,7 +2,8 @@
 # Unix Shell Project
 
 
-This shell project is based on on the OSTEP textbook and it's projects with the specifications listed [here]("https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/processes-shell")
+This shell project is based on on the OSTEP textbook and it's projects with the specifications listed [here](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/processes-shell).
+
 
 ## Dependencies
 
