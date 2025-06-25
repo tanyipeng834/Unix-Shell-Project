@@ -200,7 +200,7 @@ void executeUserCommands(char** userCommands, char** searchPath)
             
             
             
-            int fd = open(currentCommand[isRedirect+1], O_CREAT|O_WRONLY|O_TRUNC,S_IRWXU);
+            open(currentCommand[isRedirect+1], O_CREAT|O_WRONLY|O_TRUNC,S_IRWXU);
 
 
         } // no redirect
@@ -227,7 +227,7 @@ void executeUserCommands(char** userCommands, char** searchPath)
     
        for (int i = 0; i < idx; i++) {
         
-            int rc = waitpid(processes[i], NULL, 0);
+            waitpid(processes[i], NULL, 0);
             
         }
 
