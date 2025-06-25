@@ -1,7 +1,7 @@
 #include<stdlib.h>
 #include <stdio.h>
 #include "user.h"
-#include "wish.h"
+#include "shell.h"
 #include<string.h>
 #include<unistd.h>
 #include <sys/fcntl.h>

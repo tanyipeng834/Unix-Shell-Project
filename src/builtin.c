@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include "builtin.h"
 #include<string.h>
-#include "wish.h"
+#include "shell.h"
 #include<unistd.h>
 
 int isBuiltIn(char * command)

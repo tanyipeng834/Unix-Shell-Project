@@ -1,18 +1,18 @@
 
 
 CC = gcc
-TARG = wish
-OPTS = -Wall -O -g -Werror
+TARG = shell
+OPTS = -Wall -O -g 
 SRC_DIR = src
 INC_DIR = include
 
-# Automatically capture all .c files in the src/ directory
+
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 
 # Object files corresponding to the source files
 OBJS = $(SRC_FILES:.c=.o)
 
-# Include directory flag
+
 CFLAGS = -I$(INC_DIR) $(OPTS)
 
 # Rule to compile the object files
@@ -29,6 +29,15 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 # Default target
 all: $(TARG)
 
-# Clean rule to remove compiled files
+docker: docker-build docker-run
+
+# Build the Docker image
+docker-build:
+	docker build  -t shell-image .
+
+# Run the Docker container
+docker-run:
+	docker run -it --rm $(TARG)-image
+
 clean:
 	rm -f $(SRC_DIR)/*.o *.txt $(TARG)
