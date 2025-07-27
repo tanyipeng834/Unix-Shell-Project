@@ -9,5 +9,4 @@ shell.o
 src
 test-shell.sh
 test1.txt
-test2.txt
 tests

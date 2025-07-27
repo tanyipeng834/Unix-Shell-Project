@@ -184,9 +184,9 @@ void executeUserCommands(char** userCommands, char** searchPath)
         
 
         if(isRedirect){
+            
            
-            close(STDOUT_FILENO);
-            close(STDERR_FILENO);
+            
             // open the file after opening it
             for (int i =0;i<isRedirect;i++){
                 arguments[i] = strdup(currentCommand[i]);
@@ -196,7 +196,19 @@ void executeUserCommands(char** userCommands, char** searchPath)
             
             
             
-            open(currentCommand[isRedirect+1], O_CREAT|O_WRONLY|O_TRUNC,S_IRWXU);
+            int file_fd = open(currentCommand[isRedirect+1], O_CREAT|O_WRONLY|O_TRUNC,S_IRWXU);
+
+            if (file_fd==-1){
+                perror("There is something wrong with the file");
+
+            }
+
+            dup2(file_fd,STDOUT_FILENO);
+            dup2(file_fd,STDERR_FILENO);
+            close(file_fd);
+
+
+            
 
 
         } // no redirect
