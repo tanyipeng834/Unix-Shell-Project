@@ -203,8 +203,15 @@ void executeUserCommands(char** userCommands, char** searchPath)
 
             }
 
-            dup2(file_fd,STDOUT_FILENO);
-            dup2(file_fd,STDERR_FILENO);
+            if(dup2(file_fd,STDOUT_FILENO)==-1){
+                perror("Error: Failed to redirect output to stdout");
+                close(file_fd);
+            }
+
+            if(dup2(file_fd,STDERR_FILENO)==-1){
+                perror("Error: Failed to redirect ");
+                close(file_fd);
+            }
             close(file_fd);
 
 
