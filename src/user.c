@@ -194,7 +194,7 @@ void executeUserCommands(char** userCommands, char** searchPath)
             }
             arguments[isRedirect]=NULL;
             
-            
+            close(STDOUT_FILENO);
             
             int file_fd = open(currentCommand[isRedirect+1], O_CREAT|O_WRONLY|O_TRUNC,S_IRWXU);
 
@@ -203,16 +203,12 @@ void executeUserCommands(char** userCommands, char** searchPath)
 
             }
 
-            if(dup2(file_fd,STDOUT_FILENO)==-1){
-                perror("Error: Failed to redirect output to stdout");
-                close(file_fd);
-            }
-
+            
             if(dup2(file_fd,STDERR_FILENO)==-1){
-                perror("Error: Failed to redirect ");
+                perror("Error: Failed to redirect to stderr");
                 close(file_fd);
             }
-            close(file_fd);
+            
 
 
             
